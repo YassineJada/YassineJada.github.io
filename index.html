@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - AI Engineer & Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="yass1.jpg" alt="Yassine JADA">
+                <h2>Portfolio</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-translate="nav_home">Accueil</a></li>
+                <li><a href="#about" data-translate="nav_about">À propos</a></li>
+                <li><a href="#skills" data-translate="nav_skills">Compétences</a></li>
+                <li><a href="#projects" data-translate="nav_projects">Projets</a></li>
+                <li><a href="#experience" data-translate="nav_experience">Expérience</a></li>
+                <li><a href="#education" data-translate="nav_education">Formation</a></li>
+                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+            </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="fr">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="Français"> FR
+                </button>
+                <button class="lang-btn" data-lang="en">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English"> EN
+                </button>
+                <button class="lang-btn" data-lang="de">
+                    <img src="https://flagcdn.com/w40/de.png" alt="Deutsch"> DE
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-image">
+                    <img src="yass1.jpg" alt="Yassine JADA">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="glitch" data-text="Yassine JADA">Yassine JADA</h1>
+                    <h2 class="typing-effect" data-translate="hero_title"></h2>
+                    <p class="hero-description" data-translate="hero_description"></p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> <span data-translate="hero_btn_projects">Voir mes projets</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> <span data-translate="hero_btn_contact">Me contacter</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/YassineJada" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yassine-jada/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:yassine.jada01@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="neural-network"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-translate="about_title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="yass2.jpg" alt="Yassine JADA">
+                    <div class="about-overlay"></div>
+                </div>
+                <div class="about-text">
+                    <h3 data-translate="about_greeting">Bonjour ! Je suis <span class="highlight">Yassine JADA</span></h3>
+                    <p data-translate="about_p1">
+                        AI Engineer passionné par l'intégration de l'IA dans des solutions applicatives innovantes. 
+                        Spécialisé en Machine Learning, Deep Learning, NLP et IA générative, je développe des systèmes 
+                        intelligents qui automatisent et optimisent les processus métiers.
+                    </p>
+                    <p data-translate="about_p2">
+                        Diplômé d'un Master en Sciences des Données et Génie Logiciel, j'ai travaillé sur des projets 
+                        variés allant de la notation de crédit bancaire aux agents intelligents d'automatisation basés 
+                        sur les LLMs. Mon expertise couvre l'ensemble du cycle de vie des projets IA, de l'analyse des 
+                        données au déploiement de modèles en production.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>2+</h4>
+                            <p data-translate="stat_experience">Années d'expérience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>12+</h4>
+                            <p data-translate="stat_projects">Projets complétés</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>6</h4>
+                            <p data-translate="stat_certifications">Certifications</p>
+                        </div>
+                    </div>
+                    <a href="Yassine_JADA_CV.pdf" class="btn btn-primary cv-download-link" download="Yassine_JADA_CV.pdf">
+                        <i class="fas fa-download"></i> <span data-translate="about_btn_cv">Télécharger CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-translate="skills_title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-translate="skill_cat_1">Machine Learning</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Régression & Clustering</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>OpenCV</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Modèles supervisés/non supervisés</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-translate="skill_cat_2">Data Science & Analyse</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Pandas & NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Power BI & Matplotlib</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL & R</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-translate="skill_cat_3">Deep Learning & IA Avancée</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>TensorFlow & PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>NLP & LLM</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>IA Générative</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Réseaux de neurones</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 84%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 data-translate="skill_cat_4">Frameworks & DevOps</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>LangChain & LangGraph</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>FastAPI & Hugging Face</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Docker & Jenkins</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git & Jupyter Notebooks</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects_title">Projets ML & AI</h2>
+            <div class="projects-grid">
+                <!-- Projet 1 - Plateforme Sportive -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=250&fit=crop&q=80" alt="Plateforme sportive">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Personalized-sports-and-nutrition-monitoring-platform" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_1_title">Plateforme de Suivi Sportif et Nutritionnel IA</h3>
+                        <p data-translate="project_1_desc">Application web avec IA générative pour gérer les programmes d'entraînement et d'alimentation personnalisés. Adaptation automatique des plans selon les progrès avec tableau de bord interactif.</p>
+                        <div class="project-tags">
+                            <span class="tag">IA Générative</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Dashboard</span>
+                            <span class="tag">LLM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Agent LLMs + MCP -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&q=80" alt="Agent intelligent">
+                        <div class="project-overlay">
+                            <a href="https://chat.cybergenix.ai" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_2_title">Agent Intelligent LLMs + Protocole MCP (PFE)</h3>
+                        <p data-translate="project_2_desc">Développement d'agents intelligents basés sur LLMs communiquant avec plusieurs MCP pour automatiser des tâches (GitLab, emails). Assistance contextuelle personnalisée selon les rôles utilisateurs.</p>
+                        <div class="project-tags">
+                            <span class="tag">LLMs</span>
+                            <span class="tag">MCP</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Multi-Agent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - MCP AI Agents -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=250&fit=crop&q=80" alt="MCP Agents">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/MCP_AI_Agents" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_3_title">MCP AI Agents - Multi-Agent System</h3>
+                        <p data-translate="project_3_desc">Référentiel d'agents IA spécialisés : AI Travel Planner, Browser Agent, GitHub Agent, Notion Agent, React Native Agent. Coordination multi-agents pour workflows complexes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Multi-Agent</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">MCP</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - AI Lead Generation -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&q=80" alt="Lead Generation">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/AI_Lead_Generation_Agent" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_4_title">AI Lead Generation Agent - Firecrawl</h3>
+                        <p data-translate="project_4_desc">Automatisation de la génération de leads depuis Quora avec Firecrawl. Extraction intelligente de profils utilisateurs et intégration Google Sheets pour les équipes sales et marketing.</p>
+                        <div class="project-tags">
+                            <span class="tag">Firecrawl</span>
+                            <span class="tag">Web Scraping</span>
+                            <span class="tag">Google Sheets</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - AI Speech Trainer -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=250&fit=crop&q=80" alt="Speech Trainer">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/AI_Speech_Trainer_Agent" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_5_title">AI Speech Trainer Agent - Multimodal Coach</h3>
+                        <p data-translate="project_5_desc">Coach d'expression orale multimodal avec analyse faciale, vocale et de contenu. Système multi-agents (Facial, Vocal, Content, Feedback, Coordinator) pour améliorer la prise de parole en public.</p>
+                        <div class="project-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Multi-Agent</span>
+                            <span class="tag">GPT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Système de Notation de Crédit -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop&q=80" alt="Credit Scoring">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Credit-Scoring-System-for-Banking" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_6_title">Système de Notation de Crédit Bancaire</h3>
+                        <p data-translate="project_6_desc">Système de scoring pour évaluer la solvabilité des clients bancaires. Utilisation de ML avec NumPy, Pandas et Scikit-learn pour modèles prédictifs et analyse de données.</p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Banking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 7 - Facial Recognition Access Control -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=250&fit=crop&q=80" alt="Facial Recognition">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Facial-Recognition-Based-Access-Control-System-for-Enterprises" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_7_title">Système de Contrôle d'Accès par Reconnaissance Faciale</h3>
+                        <p data-translate="project_7_desc">Système IoT de contrôle d'accès pour entreprises utilisant la reconnaissance faciale avec YOLOv8, OpenCV et Python pour une sécurité renforcée.</p>
+                        <div class="project-tags">
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 8 - Churn Prediction -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&q=80" alt="Churn Prediction">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Churn-Client-Prediction" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_8_title">Prédiction de Churn Client</h3>
+                        <p data-translate="project_8_desc">Analyse et prédiction du comportement client pour identifier les facteurs de désabonnement. Application de ML pour réduire le churn et améliorer la rétention.</p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Prediction</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 9 - Suivi Multi-Caméras -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&h=250&fit=crop&q=80" alt="Camera Tracking">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Detection-and-re-identification-of-people-in-camera-network-" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_9_title">Suivi de Personnes - Réseau de Caméras Intelligentes</h3>
+                        <p data-translate="project_9_desc">Système de détection et suivi humain en temps réel sur flux multi-caméras. Deep learning et OpenCV pour un suivi précis et continu.</p>
+                        <div class="project-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Tracking</span>
+                            <span class="tag">Real-time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 10 - Blockchain Voting -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop&q=80" alt="Blockchain Voting">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Blockchain-Voting-System" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_10_title">Système de Vote Blockchain - SDGLR</h3>
+                        <p data-translate="project_10_desc">Application de vote sécurisé sur blockchain privée avec Ganache (Ethereum). Smart contracts pour garantir transparence et intégrité des votes avec résultats en temps réel.</p>
+                        <div class="project-tags">
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Ethereum</span>
+                            <span class="tag">Smart Contracts</span>
+                            <span class="tag">Ganache</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 11 - Chatbot RASA -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=250&fit=crop&q=80" alt="Chatbot">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/University_CHatbot" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_11_title">Chatbot Universitaire avec RASA</h3>
+                        <p data-translate="project_11_desc">Chatbot intelligent pour la Faculté des Sciences facilitant l'accès aux informations académiques et administratives. Développé avec le framework RASA pour une conversation naturelle.</p>
+                        <div class="project-tags">
+                            <span class="tag">RASA</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Chatbot</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 12 - Analyse de Sentiments Twitter -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=250&fit=crop&q=80" alt="Sentiment Analysis">
+                        <div class="project-overlay">
+                            <a href="https://github.com/YassineJada/Analyse-des-sentiments-sur-les-r-seaux-sociaux-l-aide-de-l-ensemble-de-donn-es-Twitter" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-translate="project_12_title">Analyse de Sentiments sur Twitter</h3>
+                        <p data-translate="project_12_desc">Analyse de sentiments sur les réseaux sociaux à l'aide de datasets Twitter. Traitement du langage naturel pour extraire et classifier les émotions et opinions des utilisateurs.</p>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Sentiment Analysis</span>
+                            <span class="tag">Twitter API</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-translate="experience_title">Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-translate="exp_1_title">AI Engineer</h3>
+                        <h4 data-translate="exp_1_company">CyberGenix - France (Remote) • Sept. 2025 - Présent</h4>
+                        <p data-translate="exp_1_desc">
+                            • Intégration de l'IA dans des solutions applicatives clients<br>
+                            • Optimisation et fine-tuning de modèles open-source pour répondre aux besoins de CyberGenix<br>
+                            • Veille technologique et exploration des dernières avancées en IA appliquée au développement logiciel
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-translate="exp_2_title">Stage de fin d'études - AI Engineer</h3>
+                        <h4 data-translate="exp_2_company">CyberGenix - France (Remote) • Mars 2025 - Sept. 2025</h4>
+                        <p data-translate="exp_2_desc">
+                            • Conception et développement d'un agent intelligent d'automatisation contextuelle basé sur l'intégration de modèles de langage avancés (LLMs) et du protocole MCP<br>
+                            • Développement de modèles IA pour automatiser le cycle de développement logiciel<br>
+                            • Implémentation de solutions d'IA générative pour l'automatisation des tâches
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-translate="exp_3_title">Stage de fin d'année - Data Scientist</h3>
+                        <h4 data-translate="exp_3_company">TECHNOHACKS SOLUTIONS - Inde (Remote) • Juin 2024 - Août 2024</h4>
+                        <p data-translate="exp_3_desc">
+                            • Participation à divers projets de data science, dont le développement d'un système de notation de crédit pour les institutions bancaires<br>
+                            • Analyse de données et création de modèles prédictifs en utilisant Python et des algorithmes de machine learning<br>
+                            • Collaboration avec une équipe internationale à distance
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-translate="exp_4_title">Stage Développeur Web Full Stack</h3>
+                        <h4 data-translate="exp_4_company">Nextronic - Casablanca • Avr. 2021 - Juin 2021</h4>
+                        <p data-translate="exp_4_desc">
+                            • Conception et développement d'un site e-commerce pour la vente des produits de l'entreprise, en utilisant HTML, CSS, JavaScript<br>
+                            • Utilisation de MySQL pour la gestion des données (produits, utilisateurs et transactions)<br>
+                            • Développement full-stack avec intégration front-end et back-end
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title" data-translate="education_title">Formation Académique</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-translate="edu_1_title">Master Spécialisé en Sciences des Données, Génie Logiciel et Réseaux</h3>
+                        <h4 data-translate="edu_1_school">Université Hassan II - FS Ain Chock</h4>
+                        <p class="education-date" data-translate="edu_1_date"><i class="far fa-calendar"></i> 2023 - 2025</p>
+                        <p class="education-description" data-translate="edu_1_desc">
+                            Formation avancée en science des données, intelligence artificielle, génie logiciel 
+                            et technologies réseau. Spécialisation en Machine Learning, Deep Learning et développement d'applications IA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-translate="edu_2_title">Licence en Sciences Mathématiques et Informatiques</h3>
+                        <h4 data-translate="edu_2_school">Université Sultan Moulay Slimane - FP Khouribga</h4>
+                        <p class="education-date" data-translate="edu_2_date"><i class="far fa-calendar"></i> 2022 - 2023</p>
+                        <p class="education-description" data-translate="edu_2_desc">
+                            Formation en mathématiques appliquées et informatique avec accent sur les algorithmes, 
+                            la programmation et les fondements théoriques de l'informatique.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-translate="edu_3_title">Diplôme Universitaire de Technologie (Génie Informatique)</h3>
+                        <h4 data-translate="edu_3_school">Université Cadi Ayyad - EST Safi</h4>
+                        <p class="education-date" data-translate="edu_3_date"><i class="far fa-calendar"></i> 2019 - 2021</p>
+                        <p class="education-description" data-translate="edu_3_desc">
+                            Formation technique en génie informatique couvrant le développement logiciel, 
+                            les bases de données, les réseaux et les systèmes d'information.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-translate="edu_4_title">Baccalauréat Sciences Physiques</h3>
+                        <h4 data-translate="edu_4_school">Lycée Al Azhar Public</h4>
+                        <p class="education-date" data-translate="edu_4_date"><i class="far fa-calendar"></i> 2019</p>
+                        <p class="education-description" data-translate="edu_4_desc">
+                            Diplôme d'études secondaires avec spécialisation en sciences physiques, 
+                            fondement solide en mathématiques et sciences naturelles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications">
+                <h3 class="certifications-title" data-translate="cert_title">Certifications Professionnelles</h3>
+                <div class="certifications-grid">
+                    <div class="cert-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="cert_1">Data Science Professional (Oracle)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="cert_2">AI Certification (Huawei)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="cert_3">Python for Data Science and Machine Learning (Udemy)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="cert_4">DevOps CI/CD Using Jenkins and Docker (Orange Digital Center)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="cert_5">Power BI (365 Data Science)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="cert_6">Intro to Data Engineering (365 Data Science)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="languages">
+                <h3 class="languages-title" data-translate="lang_title">Langues</h3>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <div class="language-name">
+                            <i class="fas fa-language"></i>
+                            <span data-translate="lang_arabic">Arabe</span>
+                        </div>
+                        <div class="language-level" data-translate="lang_level_native">Maternelle</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <i class="fas fa-language"></i>
+                            <span data-translate="lang_french">Français</span>
+                        </div>
+                        <div class="language-level" data-translate="lang_level_fluent">Courant</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <i class="fas fa-language"></i>
+                            <span data-translate="lang_english">Anglais</span>
+                        </div>
+                        <div class="language-level" data-translate="lang_level_professional">Professionnel</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <i class="fas fa-language"></i>
+                            <span data-translate="lang_german">Allemand</span>
+                        </div>
+                        <div class="language-level" data-translate="lang_level_fluent">Courant</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">Contactez-moi</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-translate="contact_subtitle">Discutons de votre projet !</h3>
+                    <p data-translate="contact_description">
+                        Vous avez un projet d'IA ou de Machine Learning ? 
+                        Je serais ravi d'en discuter avec vous.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-translate="contact_email">Email</h4>
+                                <p>yassine.jada01@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-translate="contact_phone">Téléphone</h4>
+                                <p>+212 708 234 333</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-translate="contact_location">Localisation</h4>
+                                <p>Hay Al Azhar, Casablanca, Morocco</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" data-translate-placeholder="contact_form_name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" data-translate-placeholder="contact_form_email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-translate-placeholder="contact_form_subject" placeholder="Sujet">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" data-translate-placeholder="contact_form_message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="contact_form_btn">Envoyer le message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="footer_text">&copy; 2025 Portfolio. Fait avec <i class="fas fa-heart"></i> et <i class="fas fa-code"></i></p>
+        </div>
+    </footer>
+
+    <script src="translations-complete.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

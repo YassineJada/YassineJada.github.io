@@ -185,38 +185,5 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Add cursor effect
-const cursor = document.createElement('div');
-cursor.style.cssText = `
-    width: 20px;
-    height: 20px;
-    border: 2px solid #6366f1;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all 0.1s ease;
-    display: none;
-`;
-document.body.appendChild(cursor);
-
-document.addEventListener('mousemove', (e) => {
-    cursor.style.display = 'block';
-    cursor.style.left = e.clientX - 10 + 'px';
-    cursor.style.top = e.clientY - 10 + 'px';
-});
-
-// Scale cursor on hover over interactive elements
-document.querySelectorAll('a, button, .project-card').forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'scale(1.5)';
-        cursor.style.borderColor = '#ec4899';
-    });
-    
-    element.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'scale(1)';
-        cursor.style.borderColor = '#6366f1';
-    });
-});
-
+// Portfolio loaded successfully
 console.log('Portfolio loaded successfully! 🚀');

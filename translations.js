@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Force CV download instead of opening in browser
+    // Force CV download - Mobile friendly approach
     const cvLink = document.querySelector('.cv-download-link');
     if (cvLink) {
         cvLink.addEventListener('click', function(e) {
@@ -224,32 +224,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const href = this.getAttribute('href');
             const downloadName = this.getAttribute('download');
             
-            // Use fetch to download the file
-            fetch(href)
-                .then(response => response.blob())
-                .then(blob => {
-                    // Create a blob URL
-                    const blobUrl = window.URL.createObjectURL(blob);
-                    
-                    // Create a temporary link element
-                    const link = document.createElement('a');
-                    link.href = blobUrl;
-                    link.download = downloadName;
-                    link.style.display = 'none';
-                    
-                    // Append to body, click, and remove
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    
-                    // Clean up the blob URL
-                    window.URL.revokeObjectURL(blobUrl);
-                })
-                .catch(err => {
-                    console.error('Erreur lors du téléchargement:', err);
-                    // Fallback: open in new tab
-                    window.open(href, '_blank');
-                });
+            // Create a temporary link and trigger download
+            const link = document.createElement('a');
+            link.href = href;
+            link.download = downloadName;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            
+            // Trigger click
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     }
 });

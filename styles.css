@@ -494,8 +494,14 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+}
+
+@media (max-width: 350px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card {
@@ -992,14 +998,26 @@ section {
     }
 
     .language-selector {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        background: var(--darker-bg);
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        z-index: 999;
+        display: flex;
+        gap: 8px;
+        margin-left: auto;
+        position: relative;
+        top: auto;
+        right: auto;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        z-index: 1000;
+    }
+
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .lang-btn img {
+        width: 16px;
+        height: 12px;
     }
 
     .burger {
@@ -1106,5 +1124,24 @@ section {
 
     .about-text h3 {
         font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .lang-btn {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+
+    .lang-btn img {
+        width: 14px;
+        height: 10px;
     }
 }

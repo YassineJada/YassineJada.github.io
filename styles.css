@@ -1059,18 +1059,28 @@ section {
         grid-template-columns: 1fr;
     }
 
+    /* Force projects visibility on mobile */
+    .projects {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr !important;
         gap: 20px;
         padding: 0;
+        display: grid !important;
     }
 
     .project-card {
         width: 100%;
         max-width: 100%;
-        display: block;
-        visibility: visible;
-        opacity: 1;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 
     .project-image {
@@ -1083,6 +1093,18 @@ section {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .project-content {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Force skill bars visibility */
+    .skill-progress {
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .timeline::before {
@@ -1147,11 +1169,26 @@ section {
         font-size: 1.5rem;
     }
 
+    /* Force all elements visible on small mobile */
+    section,
+    .projects,
+    .projects-grid,
+    .project-card,
+    .project-image,
+    .project-content,
+    .skill-category,
+    .skill-progress {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+
     .projects {
         padding: 60px 0;
     }
 
     .projects-grid {
+        display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 20px;
     }
@@ -1159,6 +1196,8 @@ section {
     .project-card {
         max-width: 100%;
         margin: 0 auto;
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .project-image {

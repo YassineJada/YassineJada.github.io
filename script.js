@@ -56,43 +56,56 @@ window.addEventListener('scroll', () => {
 
 // Typing Effect - Now handled by translations.js after language initialization
 
-// Intersection Observer for Animations
-const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-};
+// Intersection Observer for Animations - Disabled on mobile for better performance
+const isMobile = window.innerWidth <= 768;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+if (!isMobile) {
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    document.querySelectorAll('section, .project-card, .skill-category, .timeline-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
     });
-}, observerOptions);
+}
 
-// Observe all sections and cards
-document.querySelectorAll('section, .project-card, .skill-category, .timeline-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease-out';
-    observer.observe(el);
+// Skill Bar Animation - Keep initial width
+const skillBars = document.querySelectorAll('.skill-progress');
+skillBars.forEach(bar => {
+    const targetWidth = bar.style.width;
+    bar.setAttribute('data-width', targetWidth);
 });
 
-// Skill Bar Animation on Scroll
-const skillBars = document.querySelectorAll('.skill-progress');
+// Animate skill bars on scroll (once)
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const bar = entry.target;
-            const width = bar.style.width;
-            bar.style.width = '0';
-            setTimeout(() => {
-                bar.style.width = width;
-            }, 200);
+            if (!bar.classList.contains('animated')) {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                    bar.classList.add('animated');
+                }, 100);
+            }
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 
 skillBars.forEach(bar => {
     skillObserver.observe(bar);

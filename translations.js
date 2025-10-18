@@ -216,25 +216,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Force CV download - Mobile friendly approach
+    // Force CV download - Works on mobile by using fetch and blob
     const cvLink = document.querySelector('.cv-download-link');
     if (cvLink) {
-        cvLink.addEventListener('click', function(e) {
+        cvLink.addEventListener('click', async function(e) {
             e.preventDefault();
+            e.stopPropagation();
+            
             const href = this.getAttribute('href');
             const downloadName = this.getAttribute('download');
             
-            // Create a temporary link and trigger download
-            const link = document.createElement('a');
-            link.href = href;
-            link.download = downloadName;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            
-            // Trigger click
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            try {
+                // Fetch the PDF as blob
+                const response = await fetch(href);
+                const blob = await response.blob();
+                
+                // Create object URL
+                const blobUrl = URL.createObjectURL(blob);
+                
+                // Create temporary link with download attribute
+                const tempLink = document.createElement('a');
+                tempLink.style.display = 'none';
+                tempLink.href = blobUrl;
+                tempLink.download = downloadName;
+                
+                // Add to document, click, and remove
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                
+                // Clean up
+                setTimeout(() => {
+                    document.body.removeChild(tempLink);
+                    URL.revokeObjectURL(blobUrl);
+                }, 100);
+                
+            } catch (error) {
+                console.error('Erreur téléchargement:', error);
+                // Fallback: Try direct download
+                window.location.href = href;
+            }
         });
     }
 });

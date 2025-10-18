@@ -216,44 +216,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Force CV download - Works on mobile by using fetch and blob
+    // CV download handler - Mobile friendly
     const cvLink = document.querySelector('.cv-download-link');
     if (cvLink) {
-        cvLink.addEventListener('click', async function(e) {
+        cvLink.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation();
-            
             const href = this.getAttribute('href');
             const downloadName = this.getAttribute('download');
             
-            try {
-                // Fetch the PDF as blob
-                const response = await fetch(href);
-                const blob = await response.blob();
-                
-                // Create object URL
-                const blobUrl = URL.createObjectURL(blob);
-                
-                // Create temporary link with download attribute
-                const tempLink = document.createElement('a');
-                tempLink.style.display = 'none';
-                tempLink.href = blobUrl;
-                tempLink.download = downloadName;
-                
-                // Add to document, click, and remove
-                document.body.appendChild(tempLink);
-                tempLink.click();
-                
-                // Clean up
-                setTimeout(() => {
-                    document.body.removeChild(tempLink);
-                    URL.revokeObjectURL(blobUrl);
-                }, 100);
-                
-            } catch (error) {
-                console.error('Erreur téléchargement:', error);
-                // Fallback: Try direct download
-                window.location.href = href;
+            // Detect mobile
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // On mobile: Open in new tab (allows user to download from browser menu)
+                window.open(href, '_blank', 'noopener,noreferrer');
+            } else {
+                // On desktop: Force download
+                fetch(href)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.style.display = 'none';
+                        a.href = url;
+                        a.download = downloadName;
+                        document.body.appendChild(a);
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                        document.body.removeChild(a);
+                    })
+                    .catch(() => {
+                        window.open(href, '_blank');
+                    });
             }
         });
     }
